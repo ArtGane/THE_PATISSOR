@@ -1,6 +1,4 @@
 class RentsController < ApplicationController
-  before_action :set_rent, only: [:create, :new]
-
   def index
     @rents = Rent.all
   end
@@ -9,7 +7,7 @@ class RentsController < ApplicationController
     @rent = Rent.new(rent_params)
     @rent.save
 
-    redirect_to rent_path(@rent)
+    redirect_to rents_path(@rent)
   end
 
   def new
