@@ -1,4 +1,10 @@
-<h2>Sign up</h2>
+<div class='bold-line'></div>
+<div class='container'>
+  <div class='window'>
+    <div class='overlay'></div>
+    <div class='content'>
+      <div class='welcome'>Bonjour !</div>
+      <div class='subtitle'>Ravis de te revoir!</div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -7,23 +13,31 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+<<<<<<< HEAD
                 input_html: { autocomplete: "email" } %>
     <%= f.input :address,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "address" } %>
+=======
+                input_html: { autocomplete: "email", class: 'input-line full-width' }%>
+>>>>>>> master
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", class: 'input-line full-width' } %>
     <%= f.input :password_confirmation,
                 required: true,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", class: 'input-line full-width' } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+      <div class="form-actions">
+        <div><button class='ghost-round full-width'>S'inscrire</button></div>
+        <%= link_to "Tu possede un compte ? Viens ici.", new_user_session_path %>
+      </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
-
+</div>
 <%= render "devise/shared/links" %>
+
