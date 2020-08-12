@@ -5,6 +5,10 @@ class ServicesController < ApplicationController
     @services = Service.all
   end
 
+  def show
+    @service = Service.find(service_params)
+  end
+
   def create
     @service = Service.new(service_params)
     @service.save
