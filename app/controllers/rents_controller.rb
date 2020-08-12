@@ -7,7 +7,7 @@ class RentsController < ApplicationController
     @rent = Rent.new(rent_params)
     @rent.save
 
-    redirect_to rents_path(@rent)
+    redirect_to new_service_rent_path
   end
 
   def new
