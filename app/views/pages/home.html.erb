@@ -18,10 +18,10 @@
 							<a href="#">Home</a>
 						</li>
 						<li>
-							<a href="#">About</a>
+							<a href="#">M</a>
 						</li>
 						<li>
-							<a href="#">Services</a>
+							<a href="#">L</a>
 						</li>
 						<li>
 							<a href="#">Contact</a>
@@ -39,21 +39,25 @@
 		</form>
 	</div>
 	<div class="container-card">
+	 <% @services.each do |service| %>
 		<div id="login-container">
 			<div class="profile-img"></div>
-			<h1>
-			Michel
-			</h1>
+				<h1>
+				<%= service.name %>
+				</h1>
 			<div class="description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatibus nam accusamus incidunt ab, quibusdam dolores ratione.
+			Je suis le meilleur ahah
+					<h4>Spécialités:</h4>
+				<div class="social">
+					<a><%= service.description %></a>
+				</div>
 			</div>
-			<h4>Spécialités:</h4>
+				<h4>Prix</h4>
 			<div class="social">
-				<a>Cupcake</a>
-				<a>Gateau au chocolat</a>
-				<a>Tarte au fraise</a>
+				<%= service.price_per_hour %>€
 			</div>
-			<button>Choisi moi</button>
+			<button>Choisis moi</button>
+			
 			<footer>
 				<div class="likes">
 					<p><i class='fa fa-heart'></i></p>
@@ -61,15 +65,16 @@
 				</div>
 			</footer>
 		</div>
+	 <% end %>
 		<div id="login-container">
 			<div class="profile-img"></div>
 			<h1>
 			Paula
 			</h1>
 			<div class="description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quod, dignissimos animi. Omnis veniam molestias cupiditate.
+				
 			</div>
-			<h4>Spécialités:</h4>
+
 			<div class="social">
 				<a>Éclairs</a>
 				<a>Fraisiers</a>
