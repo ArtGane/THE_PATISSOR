@@ -10,6 +10,7 @@
 </ul>
 <ul>
     <% @rents.each do |rent| %>
+    <li><%= rent.service.name %></li>
     <li><%= rent.begin_date %></li>
     <li><%= rent.end_date %></li>
     <li><%= link_to "Destroy", rent, method: :delete, data: { confirm: "Are you sure ?" } %></li>
