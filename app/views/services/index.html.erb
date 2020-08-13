@@ -1,5 +1,36 @@
-<%= Service.all %>
+<div class="search">
+	<div class="nav-service">
+		<div class="nav">
+			<nav>
+				<ul>
+					<li>
+						<%= link_to "Home", root_path %>
+					</li>
+					<li>
+						<%= link_to "Dashboard", dashboard_path %>
+					</li>
+					<li>
+						<%= link_to "Patissor", services_path %>
+					</li>
+					<li>
+						<%= link_to "Be Patissor", new_service_path %>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+		<form novalidate="novalidate" class="simple_form search" action="/services" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+		<div class="search-form-control form-group">
+			<input class="form-control string required" type="text" name="query" id="search_query" />
+			<button name="button" type="submit" class="btn btn-flat">
+			<i class="fas fa-search"></i> Search
+			</button>
+		</div>
+	</form>
+</div>
 
+<% Service.all %>
+<!-- 
 <ul>
     <% @services.each do |service| %>
     <li><%= service.name %></li>
@@ -10,3 +41,26 @@
     <% end %>
       <%= link_to "Home", root_path %>
 </ul>
+ -->
+<div class="card-index-service">
+   <% @services.each do |service| %>
+	<div id="login-container">
+		<div class="profile-img"></div>
+		<h1>
+		<%= service.name %>
+		</h1>
+		<div class="description">
+			<%= service.description %>
+		</div>
+		<h5>Prix à l'heure</h5>
+		<%= service.price_per_hour %>€
+		<h5>Localisation</h5>
+		<%= service.localisation %>
+		<%= link_to "<button>Choisis moi</button>".html_safe, new_service_rent_path(service) %>
+		
+		<footer>
+		</footer>
+	</div>
+	<% end %>
+<!-- 	 <%= link_to "Home", root_path %> -->
+</div>
