@@ -5,8 +5,9 @@ class ServicesController < ApplicationController
     @services = Service.all
     if params[:query].present?
       sql_query = " \
-          services.title @@ :query \
-          OR services.syllabus @@ :query \
+          services.name @@ :query \
+          OR services.localisation @@ :query \
+          OR services.description @@ :query \
         "
       @services = Service.joins(:director).where(sql_query, query: "%#{params[:query]}%")
     else
@@ -53,7 +54,6 @@ class ServicesController < ApplicationController
   end
 
   def set_service
-    # @service.user = current_user
     @service = Service.find(params[:id])
   end
 end
