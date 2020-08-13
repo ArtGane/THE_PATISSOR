@@ -5,9 +5,9 @@ class ServicesController < ApplicationController
     @services = Service.all
     if params[:query].present?
       sql_query = " \
-          services.name @@ :query \
-          OR services.description @@ :query \
-          OR services.localisation @@ :query \
+          name @@ :query \
+          OR description @@ :query \
+          OR localisation @@ :query \
         "
       @services = Service.where(sql_query, query: "%#{params[:query]}%")
     else
