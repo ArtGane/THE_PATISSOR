@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
     @service.user = current_user
     @service.save
-    redirect_to services_path(@service)
+    redirect_to service_path(@service)
   end
 
   def new
