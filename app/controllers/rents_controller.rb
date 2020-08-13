@@ -17,6 +17,13 @@ class RentsController < ApplicationController
     @service = Service.find(params[:service_id])
   end
 
+  def destroy
+    @rent = Rent.find(params[:id])
+    @rent.destroy
+
+    redirect_to dashboard_path
+  end
+
   private
 
   def rent_params
