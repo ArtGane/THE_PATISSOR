@@ -4,7 +4,8 @@
     <li><%= service.description %></li>
     <li><%= service.price_per_hour %></li>
     <li><%= service.localisation %></li>
-  <% end %>
+    <li><%= link_to "Destroy", service, method: :delete, data: { confirm: "Are you sure ?" } %></li>
+    <li><%= link_to "Edit", edit_service_path(@services) %></li>
+    <% end %>
 </ul>
 
-<p>test</p>
