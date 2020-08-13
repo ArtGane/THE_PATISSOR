@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @services = Service.all
+    services = Service.all
+    @top_3_services = services.sample(3)
   end
 
   def dashboard
