@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :services, only: [:show, :create, :new, :index, :destroy, :update, :edit] do
     resources :rents, only: [:create, :new, :index]
   end
+  resources :rents, only: :destroy
 end
