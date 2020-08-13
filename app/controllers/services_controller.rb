@@ -6,24 +6,24 @@ class ServicesController < ApplicationController
     if params[:query].present?
       sql_query = " \
           services.name @@ :query \
-          OR services.localisation @@ :query \
           OR services.description @@ :query \
+          OR services.localisation @@ :query \
         "
-      @services = Service.joins(:director).where(sql_query, query: "%#{params[:query]}%")
+      @services = Service.where(sql_query, query: "%#{params[:query]}%")
     else
       @services = Service.all
     end
   end
 
   def show
-    @service = Service.find(service_params)
+    @service = Service.find(params[:id])
   end
 
   def create
     @service = Service.new(service_params)
     @service.user = current_user
     @service.save
-    redirect_to services_path
+    redirect_to dashboard_path
   end
 
   def new
@@ -33,7 +33,7 @@ class ServicesController < ApplicationController
   def update
     @service = Service.find(params[:id])
     @service.update(service_params)
-    redirect_to services_path
+    redirect_to dashboard_path
   end
 
   def edit
@@ -44,7 +44,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     @service.destroy
 
-    redirect_to services_path
+    redirect_to dashboard_path
   end
 
   private
