@@ -6,6 +6,7 @@ class RentsController < ApplicationController
   def create
     @service = Service.find(params[:service_id])
     @rent = Rent.new(rent_params)
+    @rent.user = current_user
     @rent.service = @service
     @rent.save
     redirect_to dashboard_path

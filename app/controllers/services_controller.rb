@@ -3,6 +3,15 @@ class ServicesController < ApplicationController
 
   def index
     @services = Service.all
+    if params[:query].present?
+      sql_query = " \
+          services.title @@ :query \
+          OR services.syllabus @@ :query \
+        "
+      @services = Service.joins(:director).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @services = Service.all
+    end
   end
 
   def show
@@ -13,7 +22,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
     @service.user = current_user
     @service.save
-    redirect_to service_path(@service)
+    redirect_to services_path
   end
 
   def new
@@ -21,20 +30,20 @@ class ServicesController < ApplicationController
   end
 
   def update
-    @service = Service.find(service_params)
+    @service = Service.find(params[:id])
     @service.update(service_params)
-    redirect_to service_path(@service)
+    redirect_to services_path
   end
 
   def edit
-    @service = Service.find(service_params)
+    @service = Service.find(params[:id])
   end
 
   def destroy
-    @service = Service.find(service_params)
+    @service = Service.find(params[:id])
     @service.destroy
 
-    redirect_to service_path(@service)
+    redirect_to services_path
   end
 
   private
@@ -44,6 +53,7 @@ class ServicesController < ApplicationController
   end
 
   def set_service
+    # @service.user = current_user
     @service = Service.find(params[:id])
   end
 end
