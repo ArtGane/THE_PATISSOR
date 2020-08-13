@@ -4,19 +4,16 @@ class RentsController < ApplicationController
   end
 
   def create
-    # @rent = Rent.new(rent_params)
-    # @rent.service = current_service
-    # @rent.save
-    # redirect_to new_service_rent_path(@rent)
-
     @service = Service.find(params[:service_id])
-    @rent = Rent.find(params[:name])
-    @service.rents << @rent
-    redirect_to new_service_rent_path(@service)
+    @rent = Rent.new(rent_params)
+    @rent.service = @service
+    @rent.save
+    redirect_to dashboard_path
   end
 
   def new
     @rent = Rent.new
+    @service = Service.find(params[:service_id])
   end
 
   private

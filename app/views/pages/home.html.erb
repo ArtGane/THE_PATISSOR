@@ -50,21 +50,19 @@
 	</form>
 </div>
 <div class="container-card">
+	<% @services.each do |service| %>
 	<div id="login-container">
 		<div class="profile-img"></div>
 		<h1>
-		Michel
+		<%= service.name %>
 		</h1>
 		<div class="description">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatibus nam accusamus incidunt ab, quibusdam dolores ratione.
+			<%= service.description %>
 		</div>
-		<h4>Spécialités:</h4>
-		<div class="social">
-			<a>Cupcake</a>
-			<a>Gateau au chocolat</a>
-			<a>Tarte au fraise</a>
-		</div>
-		<%= link_to "<button>Choisis moi</button>".html_safe, new_service_rent_path %>
+		<%= service.price_per_hour %>
+		<h5>Localisation</h5>
+		<%= service.localisation %>
+		<%= link_to "<button>Choisis moi</button>".html_safe, new_service_rent_path(service) %>
 		
 		<footer>
 			<div class="likes">
@@ -73,50 +71,7 @@
 			</div>
 		</footer>
 	</div>
-	<div id="login-container">
-		<div class="profile-img"></div>
-		<h1>
-		Paula
-		</h1>
-		<div class="description">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quod, dignissimos animi. Omnis veniam molestias cupiditate.
-		</div>
-		<h4>Spécialités:</h4>
-		<div class="social">
-			<a>Éclairs</a>
-			<a>Fraisiers</a>
-			<a>Paris-Brest</a>
-		</div>
-		<%= link_to "<button>Choisis moi</button>".html_safe, new_service_rent_path %>
-		<footer>
-			<div class="likes">
-				<p><i class='fa fa-heart'></i></p>
-				<p>3.2K</p>
-			</div>
-		</footer>
-	</div>
-	<div id="login-container">
-		<div class="profile-img"></div>
-		<h1>
-		Philippe
-		</h1>
-		<div class="description">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium illum minus veniam error aliquam suscipit delectus.
-		</div>
-		<h4>Spécialités:</h4>
-		<div class="social">
-			<a>Saint-Honoré</a>
-			<a>Mille feuille</a>
-			<a>Tarte Tatin</a>
-		</div>
-		<%= link_to "<button>Choisis moi</button>".html_safe, new_service_rent_path %>
-		<footer>
-			<div class="likes">
-				<p><i class='fa fa-heart'></i></p>
-				<p>1.9K</p>
-			</div>
-		</footer>
-	</div>
+	<% end %>
 </div>
 <div class="footer">
 	<div class="footer-links">
