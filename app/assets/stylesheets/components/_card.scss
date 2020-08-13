@@ -139,5 +139,9 @@ $darkBackground: #5b5f97;
   height: 85vh;
 }
 
-
+.card-index-service{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
 
