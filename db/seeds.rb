@@ -58,50 +58,13 @@ my_service4.user = u2
 my_service4.save! 
 
 my_service5 = Service.new(
-    name:"Manon",
-    description: "Après avoir été élue meilleur pâtissière de l'année en 2009, je suis devenue la première femme à être sacrée « meilleure pâtissière de restaurant du monde » en 2018",
-    price_per_hour: "35€/h",
+    name:"Robin",
+    description: "Elu meilleur pâtissier de l'année en 2009.
+    Soucieux du bon traitement des animaux je me suis particulièrement spécialisié dans la gastronomie vegan ",
+    price_per_hour: "95€/h",
     localisation: " Sarrebourg (Moselle)"
 )
 my_service5.user = u2
 my_service5.save! 
 
-my_service6 = Service.new(
-    name:"Sebastien",
-    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
-    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
-    price_per_hour: "65€/h",
-    localisation: "Toulouse"
-)
-my_service6.user = u2
-my_service6.save! 
-
-my_service7 = Service.new(
-    name:"Robin",
-    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
-    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
-    price_per_hour: "42€/h",
-    localisation: "Toulouse"
-)
-my_service7.user = u2
-my_service7.save! 
-
-my_service8 = Service.new(
-    name:"Maxime",
-    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
-    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
-    price_per_hour: "26€/h",
-    localisation: "Toulouse"
-)
-my_service8.user = u2
-my_service8.save! 
-
-my_service9 = Service.new(
-    name:"Charlotte",
-    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
-    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
-    price_per_hour: "57€/h",
-    localisation: "Toulouse"
-)
-my_service9.user = u2
-my_service9.save! 
+ 
