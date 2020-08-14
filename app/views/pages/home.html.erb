@@ -61,10 +61,12 @@
 		<div class="description">
 			<%= service.description %>
 		</div>
+		<div class="description-prix-loc">
 		<h5>Prix à l'heure</h5>
 		<%= service.price_per_hour %>€
 		<h5>Localisation</h5>
 		<%= service.localisation %>
+		</div>
 		<%= link_to "<button>Choisis moi</button>".html_safe, new_service_rent_path(service) %>
 		
 		<footer>
