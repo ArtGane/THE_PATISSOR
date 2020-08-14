@@ -2,7 +2,7 @@
 $background: #fffffb;
 $accent: #ff6b6c;
 $otherAccent: #99BCFE;
-$darkBackground: #5b5f97;
+$darkBackground: #99BCFE;
 
 #login-container {
   margin-left:20px;
@@ -41,6 +41,7 @@ $darkBackground: #5b5f97;
 
   .description-prix-loc{
       height:160px;
+      width: 350px;
   }
 
   button {

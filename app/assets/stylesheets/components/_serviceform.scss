@@ -9,6 +9,12 @@ $gray: #9b9b9b;
   width: 50%;
 }
 
+.input-line {
+  color: black !important;
+  border: none;
+  border-bottom: 1px solid #99BCFE !important;
+}
+
 .form__field {
   font-family: inherit;
   width: 100%;
@@ -60,7 +66,7 @@ $gray: #9b9b9b;
 }
 
 .container-service-form{
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
