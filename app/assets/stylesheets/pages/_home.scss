@@ -1,18 +1,20 @@
 // Specific CSS for your home-page
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-	background-color: #AEB0BB;
+body {
+	background-color: #A8BBC8;
 	margin: 0px;
 
 }
 
-ul{
+ul {
 	list-style-type:none;
 }
 
-h2{
+h2 {
 	border-bottom: 1px solid lightgrey;
 	color: white;
-	margin: 50px;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	text-align: center;
 }
