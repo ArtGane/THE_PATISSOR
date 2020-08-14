@@ -4,8 +4,6 @@
     <div class='overlay'></div>
     <div class='content'>
       <div class='welcome'>Bonjour !</div>
-      <div class='subtitle'>Tu dois créer un compte pour utiliser nos services.</div>
-
       <div class='subtitle'>Ravi de te revoir</div>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -27,4 +25,3 @@
     </div>
   </div>
 </div>
-<%= render "devise/shared/links" %>
