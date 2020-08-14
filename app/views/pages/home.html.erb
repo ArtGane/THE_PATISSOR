@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	<style type="text/css">* {cursor: url(https://cur.cursors-4u.net/holidays/hol-4/hol340.cur), auto !important;}</style><a href="http://www.cursors-4u.com/cursor/2009/12/15/cute-gingerbread-man.html" target="_blank" title="Cute Gingerbread Man"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Cute Gingerbread Man" style="position:absolute; top: 0px; right: 0px;" /></a>
 		<meta charset="UTF-8">
 		<title>The Patissor</title>
 	</head>
@@ -14,7 +15,6 @@
 					<%= link_to "Another action", "#", class: "dropdown-item" %>
 					<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 				</div>
-			</li>
 			<% else %>
 			<%= link_to new_user_session_path do %>
 			<i class="far fa-user-circle"></i>
@@ -50,7 +50,7 @@
 		</div>
 	</form>
 </div>
-<h2>Top Patissors :</h2>
+<h2>Top Patissors</h2>
 <div class="container-card">
 	<% @top_3_services.each do |service| %>
 	<div id="login-container">
