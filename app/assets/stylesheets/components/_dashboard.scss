@@ -1,21 +1,40 @@
-.container{
-	border: 2px solid red;
+.container-dashboard{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	color: white;
+	margin: 20px;
 	
 }
 
-.pprofil{
-	border: 2px solid yellow;
-	width: 500px;
-	height: 70vh;
-	padding: 2px;
+.container-service{
+  box-shadow: 0 0 15px white;
+  height:210px;
+  width: 730px;
+  margin: 10px;
+  padding: 10px;
 }
 
-.pdashboard{
-	border: 2px solid blue;
-	width: 500px;
-	height: 70vh;
-	padding: 2px;
+.container-rent{
+  border-bottom: 1px solid white;
+  height: 100px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
 }
+
+  .description-dashboard{
+  	width: 700px;
+    height:100px;
+    margin:10px;
+  }
+
+  .description-prix-loc{
+  	width: 700px;
+      height:100px;
+  }
+
+  h3 {
+  	margin: 15px;
+  	width: 150px;
+  }
