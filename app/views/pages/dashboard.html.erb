@@ -1,20 +1,50 @@
-<ul>
-    <% @services.each do |service| %>
-    <li><%= service.name %></li>
-    <li><%= service.description %></li>
-    <li><%= service.price_per_hour %></li>
-    <li><%= service.localisation %></li>
-    <li><%= link_to "Destroy", service, method: :delete, data: { confirm: "Are you sure ?" } %></li>
-    <li><%= link_to "Edit", edit_service_path(service) %></li>
-  <% end %>
-</ul>
-<ul>
-    <% @rents.each do |rent| %>
-    <li><%= rent.service.name %></li>
-    <li><%= rent.begin_date %></li>
-    <li><%= rent.end_date %></li>
-    <li><%= link_to "Destroy", rent, method: :delete, data: { confirm: "Are you sure ?" } %></li>
-  <% end %>
-</ul>
-
-<%= link_to "Home", root_path %>
+<div class="search">
+    <div class="nav">
+        <nav>
+            <ul>
+                <li>
+                    <%= link_to "Home", root_path %>
+                </li>
+                <li>
+                    <%= link_to "Dashboard", dashboard_path %>
+                </li>
+                <li>
+                    <%= link_to "Patissor", services_path %>
+                </li>
+                <li>
+                    <%= link_to "Be Patissor", new_service_path %>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+</div>
+<div class="container-dashboard">
+    <ul>
+        <h3>My services</h3>
+        <% @services.each do |service| %>
+        <div class="container-service">
+            <li><%= service.name %></li>
+            <div class="description-dashboard">
+                <li><%= service.description %></li>
+            </div>
+            <div class="description-prix-loc">
+                <li><%= service.price_per_hour %>€</li>
+                <li><%= service.localisation %></li>
+            </div>
+        </div>
+        <li><%= link_to "Destroy", service, method: :delete, data: { confirm: "Are you sure ?" } %></li>
+        <li><%= link_to "Edit", edit_service_path(service) %></li>
+        <% end %>
+    </ul>
+    <ul>
+        <h3>My rents</h3>
+        <% @rents.each do |rent| %>
+        <div class="container-rent">
+            <li><%= rent.service.name %></li>
+            <li><%= rent.begin_date %></li>
+            <li><%= rent.end_date %></li>
+        </div>
+        <li><%= link_to "Destroy", rent, method: :delete, data: { confirm: "Are you sure ?" } %></li>
+        <% end %>
+    </ul>
