@@ -1,5 +1,5 @@
-<style type="text/css">* {cursor: url(https://cur.cursors-4u.net/holidays/hol-4/hol340.cur), auto !important;}</style><a href="http://www.cursors-4u.com/cursor/2009/12/15/cute-gingerbread-man.html" target="_blank" title="Cute Gingerbread Man"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Cute Gingerbread Man" style="position:absolute; top: 0px; right: 0px;" /></a>
-		<div class="nav">
+<div class='image-container' style='background-image: url("<%= image_path "cupcake.jpg" %>")'>
+		<div class="nav-service">
 			<nav>
 				<ul>
 					<li>
@@ -18,19 +18,18 @@
 			</nav>
 		</div>
 
-<div class="container-service-form">
-<h1>New Services</h1>
-<div class="form__group field">
-<%= simple_form_for(@service) do |f| %>
-  <%= f.input :name,
-              input_html: { autocomplete: "name", class: "input-line full-width" } %>
-  <%= f.input :description,
-              input_html: { autocomplete: "description", class: "input-line full-width" } %>
-   <%= f.input :price_per_hour,
+	<div class="container container-service-form">
+		<h1>Be a Patissor</h1>
+			<%= simple_form_for(@service) do |f| %>
+			<%= f.input :name,
+               input_html: { autocomplete: "name", class: "input-line full-width" } %>
+			<%= f.input :description,
+               input_html: { autocomplete: "description", class: "input-line full-width" } %>
+			<%= f.input :price_per_hour,
                input_html: { autocomplete: "price_per_hour", class: "input-line full-width" } %>
-    <%= f.input :localisation,
-          input_html: { autocomplete: "localisation", class: "input-line full-width" } %>
-  <%= f.submit class: "btn btn-outline-secondary btn-lg mb-2" %>
-<% end %>
-</div>
+				<%= f.input :localisation,
+                input_html: { autocomplete: "localisation", class: "input-line full-width" } %>
+			<%= f.submit "Let's cook !", class: "btn btn-outline-secondary btn-lg mb-2" %>
+			<% end %>
+	</div>
 </div>
