@@ -1,22 +1,25 @@
 
 
+Service.destroy_all
 User.destroy_all
 
-Service.destroy_all
 
 u1 = User.new(email: "paula@test.fr", password: "123456", address: "Marseille")
 u1.save!
 
 
 my_service = Service.new(
-    name: "Philippe",
-    description: "Polyvalent et compétent , spécialisé dans les gateaux d'anniversaire , mariage, gateaux à étages, pour 45€ de l'heure , il se déplace chez vous,
-    avec le gateau de votre choix, et le mange devant vous, très gourmand, il ne laissera rien :) ",
+    name: "Paula",
+    description: "Polyvalente et compétente , spécialisée dans les gateaux d'anniversaire , mariage, gateaux à étages, pour 45€ de l'heure , elle se déplace chez vous,
+    avec le gateau de votre choix, et le mange devant vous, très gourmande, elle ne laissera rien :) ",
     price_per_hour: "45€/h",
     localisation: "Marseille"
 )
 my_service.user = u1
 my_service.save!
+
+u2 = User.new(email: "paula1@test.fr", password: "123456", address: "Marseille")
+u2.save!
 
 my_service1 = Service.new(
     name:"Argane",
@@ -25,7 +28,7 @@ my_service1 = Service.new(
     localisation: "Marseille"
 )
 
-my_service1.user = u1
+my_service1.user = u2
 my_service1.save!
 
 my_service2 = Service.new(
@@ -36,19 +39,19 @@ my_service2 = Service.new(
     localisation: "Toulon"
 )
 
-my_service2.user = u1
+my_service2.user = u2
 my_service2.save!
 
 my_service3 = Service.new(
-    name: "Paula", 
-    description: "PatCuisinière en desserts de restaurant, je fais également les crèmes (anglaise, chantilly, renversées...)
+    name: "Philippe", 
+    description: "PatCuisinier en desserts de restaurant, je fais également les crèmes (anglaise, chantilly, renversées...)
     les sauces  et coulis, les soufflés, les glaces, les salades de fruit..
-    Pâtissière de l'année 2013 Gault et Millau..",
+    Pâtissier de l'année 2013 Gault et Millau..",
     price_per_hour: "65€/h",
     localisation: "Paris"
 )
 
-my_service3.user = u1
+my_service3.user = u2
 my_service3.save!
 
 my_service4 = Service.new(
@@ -60,6 +63,6 @@ my_service4 = Service.new(
 )
 
 
-my_service4.user = u1
+my_service4.user = u2
 my_service4.save! 
 
