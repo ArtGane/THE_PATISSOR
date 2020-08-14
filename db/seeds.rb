@@ -1,12 +1,8 @@
-
-
 Service.destroy_all
 User.destroy_all
 
-
 u1 = User.new(email: "paula@test.fr", password: "123456", address: "Marseille")
 u1.save!
-
 
 my_service = Service.new(
     name: "Paula",
@@ -27,7 +23,6 @@ my_service1 = Service.new(
     price_per_hour: "45€/h",
     localisation: "Marseille"
 )
-
 my_service1.user = u2
 my_service1.save!
 
@@ -38,7 +33,6 @@ my_service2 = Service.new(
     price_per_hour: "53€/h",
     localisation: "Toulon"
 )
-
 my_service2.user = u2
 my_service2.save!
 
@@ -50,7 +44,6 @@ my_service3 = Service.new(
     price_per_hour: "65€/h",
     localisation: "Paris"
 )
-
 my_service3.user = u2
 my_service3.save!
 
@@ -61,8 +54,54 @@ my_service4 = Service.new(
     price_per_hour: "35€/h",
     localisation: "Toulouse"
 )
-
-
 my_service4.user = u2
 my_service4.save! 
 
+my_service5 = Service.new(
+    name:"Manon",
+    description: "Après avoir été élue meilleur pâtissière de l'année en 2009, je suis devenue la première femme à être sacrée « meilleure pâtissière de restaurant du monde » en 2018",
+    price_per_hour: "35€/h",
+    localisation: " Sarrebourg (Moselle)"
+)
+my_service5.user = u2
+my_service5.save! 
+
+my_service6 = Service.new(
+    name:"Sebastien",
+    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
+    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
+    price_per_hour: "65€/h",
+    localisation: "Toulouse"
+)
+my_service6.user = u2
+my_service6.save! 
+
+my_service7 = Service.new(
+    name:"Robin",
+    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
+    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
+    price_per_hour: "42€/h",
+    localisation: "Toulouse"
+)
+my_service7.user = u2
+my_service7.save! 
+
+my_service8 = Service.new(
+    name:"Maxime",
+    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
+    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
+    price_per_hour: "26€/h",
+    localisation: "Toulouse"
+)
+my_service8.user = u2
+my_service8.save! 
+
+my_service9 = Service.new(
+    name:"Charlotte",
+    description: "Je suis chef patissier , chef du restaurant Sarkara à Toulouse, j'ai obtenu deux étoiles Michelin en janvier 2020.
+    Mon restaurant est le premier restaurant gastronomique de desserts au monde primé par le guide Michelin",
+    price_per_hour: "57€/h",
+    localisation: "Toulouse"
+)
+my_service9.user = u2
+my_service9.save! 
