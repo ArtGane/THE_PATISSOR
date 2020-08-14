@@ -1,0 +1,13 @@
+.container-rent-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+      color: white;
+      border-bottom-color: black;
+  }
+  p {
+      color: white;
+  }
+}

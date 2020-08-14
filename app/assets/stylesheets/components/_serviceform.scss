@@ -64,9 +64,17 @@ $gray: #9b9b9b;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:white;
+  color:black;
+  position: absolute;
+  left: -200px;
 }
 
   h1{
     border-bottom: 1px solid white;
+  }
+
+  .nav-service {
+    a {
+      color: black !important;
+    }
   }

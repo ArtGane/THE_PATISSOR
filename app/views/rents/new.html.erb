@@ -18,15 +18,15 @@
 			</nav>
 		</div>
 
-<div class="container-service-form">
+<div class="container-rent-form">
 <h1>New Rent</h1>
 <div class="form__group field">
-  <%= simple_form_for([@service, @rent]) do |f| %>
+ 	<%= simple_form_for([@service, @rent]) do |f| %>
     <%= f.input :begin_date,
                 input_html: { autocomplete: "begin_date", class: "input-line full-width" } %>
     <%= f.input :end_date,
                 input_html: { autocomplete: "end_date", class: "input-line full-width" } %>
-		<%= f.submit class: "btn btn-outline-secondary btn-lg mb-2", style: "justify-content:right" %>
+		<%= f.submit class: "btn btn-outline-secondary btn-lg mb-2" %>
   <% end %>
 </div>
 </div>
