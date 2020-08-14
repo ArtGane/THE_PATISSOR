@@ -1,4 +1,7 @@
+<div class='image-container' style='background-image: url("<%= image_path "cupcake.jpg" %>")'>
+<div class="container container-service-form">
 <%= simple_form_for(@service) do |f| %>
+<h1>Update your service</h1>
   <%= f.input :name,
               input_html: { autocomplete: "name", class: "input-line full-width" } %>
   <%= f.input :description,
@@ -9,3 +12,5 @@
           input_html: { autocomplete: "localisation", class: "input-line full-width" } %>
   <%= f.submit class: "btn btn-outline-secondary btn-lg mb-2" %>
 <% end %>
+</div>
+</div>
