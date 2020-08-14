@@ -4,10 +4,21 @@
   justify-content: center;
   align-items: center;
   h1 {
-      color: white;
-      border-bottom-color: black;
+      color: #99BCFE;
+      border-bottom-color: white;
   }
   p {
-      color: white;
+      color: #99BCFE;
   }
+}
+
+.btn-outline-secondary {
+    color: #99BCFE !important;
+    border-color: #99BCFE !important;
+}
+
+.btn-outline-secondary:hover {
+    color: white !important;
+    background-color: #99BCFE !important;
+    border-radius: 15px;
 }
